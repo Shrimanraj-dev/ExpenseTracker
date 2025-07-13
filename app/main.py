@@ -19,5 +19,4 @@ def index():
         table.put_item(Item=item)
         return "Expense recorded!"
     return render_template('form.html')
- templates/form.html
 app.run(host='0.0.0.0', port=80)
