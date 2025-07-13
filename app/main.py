@@ -4,7 +4,7 @@ from datetime import datetime
 import uuid
 
 app = Flask(__name__)
-dynamodb = boto3.resource('dynamodb')
+dynamodb = boto3.resource('dynamodb',region_name='ap-south-1')
 table = dynamodb.Table('Expenses')
 
 @app.route('/', methods=['GET', 'POST'])
